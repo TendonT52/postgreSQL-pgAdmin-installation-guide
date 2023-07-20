@@ -41,6 +41,7 @@ Follow these steps to set up PostgreSQL and pgAdmin using Docker Compose:
 
    - Email: `admin@admin.com`
    - Password: `root`
+   <img width="1589" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/e00bd58e-31e7-4053-b909-e8efb932e551">
 
 7. In the pgAdmin interface, you can add a new server and manage your PostgreSQL database effortlessly.
 
