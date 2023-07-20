@@ -68,9 +68,10 @@ To verify that the installation has completed successfully and PostgreSQL is run
 7. Click the "Save" button to add the server.
 
 8. In the pgAdmin interface, navigate to `Server -> db -> Database -> test_db`. Right-click on the `test_db` database and select "Query Tool" to open a new tab.
+
    <img width="436" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/0a4fd963-beb7-4d61-82e4-2cac697306ad">
 
-9. Copy and paste the following SQL query into the Query Tool tab:
+10. Copy and paste the following SQL query into the Query Tool tab:
 
 ```sql
 CREATE TABLE accounts (
