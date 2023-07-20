@@ -55,19 +55,22 @@ To verify that the installation has completed successfully and PostgreSQL is run
 3. Select "Register Server" from the context menu.
 
 4. In the "General" tab, provide a name for your server (e.g., My PostgreSQL Server).
+   <img width="610" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/d178f7f2-f01a-46c5-b764-760c00dcf31c">
 
-5. Switch to the "Connection" tab and enter the following details:
+6. Switch to the "Connection" tab and enter the following details:
 
    - Host name/address: `db`
    - Port: `5432`
    - Username: `root`
-   - Password: `Root` (Note the capital "R")
+   - Password: `root`
+   <img width="722" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/853f62a4-0e0e-4ee6-8df8-a586061247b9">
 
-6. Click the "Save" button to add the server.
+7. Click the "Save" button to add the server.
 
-7. In the pgAdmin interface, navigate to `Server -> db -> Database -> test_db`. Right-click on the `test_db` database and select "Query Tool" to open a new tab.
+8. In the pgAdmin interface, navigate to `Server -> db -> Database -> test_db`. Right-click on the `test_db` database and select "Query Tool" to open a new tab.
+   <img width="436" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/0a4fd963-beb7-4d61-82e4-2cac697306ad">
 
-8. Copy and paste the following SQL query into the Query Tool tab:
+9. Copy and paste the following SQL query into the Query Tool tab:
 
 ```sql
 CREATE TABLE accounts (
@@ -79,12 +82,25 @@ CREATE TABLE accounts (
     last_login TIMESTAMP
 );
 ```
+   <img width="1402" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/487c0730-42df-491b-9a85-c488738e99c1">
 
 9. Execute the query by clicking the "Execute" button or pressing `F5`.
 
 10. To ensure that the table was created successfully, navigate to `Server -> db -> Database -> test_db -> Schemas -> public -> Tables`. You should see the `accounts` table listed.
+<img width="389" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/c2d7d268-69b2-4631-a70e-1f2a53388192">
 
 If you can see the `accounts` table, congratulations! You have successfully completed the installation and configuration of PostgreSQL and pgAdmin using Docker Compose.
+
+## Troubleshooting
+
+If you do not see the `accounts` table or encounter any issues, try the following steps:
+
+1. Right-click on the "Servers" option under the "Browser" section in pgAdmin and select "Refresh." This action may update the list of databases and tables.
+<img width="360" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/4f5888d3-47e0-415b-8baa-9f1177da3c97">
+
+2. Double-check the SQL query you copied into the Query Tool and ensure there are no typos or syntax errors.
+
+3. If the issue persists, consider stopping and removing the containers using `docker-compose down`, and then try the installation process again.
 
 ## Stopping and Removing Containers
 
