@@ -51,11 +51,11 @@ To verify that the installation has completed successfully and PostgreSQL is run
 1. Open pgAdmin in your web browser (`localhost:5050`).
 
 2. On the left-hand side of the pgAdmin interface, right-click on the "Servers" option under the "Browser" section.
-   <img width="610" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/d178f7f2-f01a-46c5-b764-760c00dcf31c">
    
-3. Select "Register Server" from the context menu.
+3. Select "Register -> Server" from the context menu.
+   <img width="610" alt="image" src="https://github.com/TendonT52/postgreSQL-pgAdmin-installation-guide/assets/88754538/d178f7f2-f01a-46c5-b764-760c00dcf31c">
 
-4. In the "General" tab, provide a name for your server (e.g., My PostgreSQL Server).
+5. In the "General" tab, provide a name for your server (e.g., My PostgreSQL Server).
 
 6. Switch to the "Connection" tab and enter the following details:
 
