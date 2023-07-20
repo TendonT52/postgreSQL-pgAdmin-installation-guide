@@ -34,7 +34,7 @@ Follow these steps to set up PostgreSQL and pgAdmin using Docker Compose:
 
 5. Once the containers are up and running, you can access the following services:
 
-   - PostgreSQL: `localhost:5432`
+   - PostgreSQL: `localhost:5432` (In this case we will access PostgreSQL via pgAdmin)
    - pgAdmin: `localhost:5050`
 
 6. Access the pgAdmin web interface by navigating to `localhost:5050` in your web browser. Log in using the following credentials:
