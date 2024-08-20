@@ -1,11 +1,15 @@
-version: '3.8'
+# version key is obsolete in the latest docker compose version,
+# uncomment it if you are using an old version
+
+# version: "3.8"
+
 services:
   db:
     container_name: pg_container
-    image: postgres
+    image: postgres:12
     restart: always
     environment:
-      POSTGRES_USER: root
+      POSTGRES_USER: admin
       POSTGRES_PASSWORD: root
       POSTGRES_DB: test_db
     ports:
@@ -14,7 +18,7 @@ services:
       - pg-data:/var/lib/postgresql/data
   pgadmin:
     container_name: pgadmin4_container
-    image: dpage/pgadmin4:8.2
+    image: dpage/pgadmin4:8
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
@@ -23,7 +27,7 @@ services:
       - "5050:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
-      - ./config.py:/pgadmin4/config.py
+      - ./config_local.py:/pgadmin4/config_local.py
 
 volumes:
   pg-data:
